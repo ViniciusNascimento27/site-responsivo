@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; /* Cor de fundo */
+}
+
+/* Formulário */
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+#form-pagamento {
+    display: flex; /* Organiza os elementos em linha */
+    flex-direction: column; /* Elementos dispostos verticalmente */
+    gap: 15px; /* Espaçamento entre elementos */
+    width: 400px; /* Largura do formulário */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda do formulário */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: white; /* Cor de fundo do formulário */
+}
+
+label {
+    display: block; /* Exibe rótulos na linha acima do input */
+    margin-bottom: 5px;
+    color: #333; /* Cor dos rótulos */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Largura total dos inputs */
+    padding: 10px; /* Espaçamento interno dos inputs */
+    border: 1px solid #ccc; /* Borda dos inputs */
+    border-radius: 5px; /* Bordas arredondadas dos inputs */
+    font-size: 16px; /* Tamanho da fonte dos inputs */
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Cor do botão de pagamento */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Efeito hover para indicar interação */
+    transition: background-color 0.3s ease; /* Animação de hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #031930; /* Cor do botão no hover */
+}
+
+/* Botão Voltar */
+
+a#btn-pagar {
+    display: block; /* Exibe o botão como um bloco */
+    text-align: center; /* Centraliza o texto do botão */
+    margin-top: 20px; /* Espaçamento acima do botão */
+    color: #333; /* Cor do texto do botão */
+    text-decoration: none; /* Remove o underline padrão */
+    transition: color 0.3s ease; /* Animação de hover */
+}
+
+a#btn-pagar:hover {
+    color: #007bff; /* Cor do texto do botão no hover */
+}
+    </style>
+</head>
+<body>
+        <h2>Pagamento</h2>
+        <form id="form-pagamento">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="cartao">Cartão de Crédito:</label>
+            <input type="text" id="cartao" name="cartao" required>
+
+            <label for="validade">Validade:</label>
+            <input type="text" id="validade" name="validade" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <button onclick="pagar()" type="submit">Confirmar Pagamento</button>
+        </form>
+        <br>
+        <a href="index.html" id="btn-pagar">Voltar ao site</a>
+</body>
+<script src="pagamento.js"></script>
+</html>
